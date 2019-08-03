@@ -86,7 +86,7 @@ const h: H<{}> = (tagName, attributes, ...children) => {
   };
 };
 
-const render = (node: JSX.Element) => {
+const toHtml = (node: JSX.Element) => {
   if (DEBUG) {
     console.log(JSON.stringify(node, null, 2));
     console.log('\n\n------\n\n');
@@ -94,4 +94,4 @@ const render = (node: JSX.Element) => {
   return mjml(node);
 };
 
-export { render, h };
+export { toHtml, h };

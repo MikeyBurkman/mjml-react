@@ -10,8 +10,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "debug": "NODE_PATH=. ts-node-dev --respawn src/index.tsx",
-    "start": "TS_NODE_FILES=true ts-node src/index.tsx",
+    "debug": "NODE_PATH=. ts-node-dev --respawn example.tsx",
+    "start": "TS_NODE_FILES=true ts-node example.tsx",
     "pretty": "prettier-check \"**/*.{js,json,css,md,ts,tsx}\"",
     "pretty-fix": "prettier --write \"**/*.{js,json,css,md,ts,tsx}\""
   },

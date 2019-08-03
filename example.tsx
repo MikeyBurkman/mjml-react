@@ -1,4 +1,4 @@
-import { render, h } from './app';
+import { toHtml, h } from './src/mjml-react';
 import * as fs from 'fs';
 
 interface FooTextProps {
@@ -47,7 +47,7 @@ const foo = (
 );
 
 console.log('\n\n-----\n\n');
-const r = render(foo);
+const r = toHtml(foo);
 
 if (r.errors.length > 0) {
   console.log(r);
