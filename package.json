@@ -1,0 +1,44 @@
+{
+  "name": "mjml-react",
+  "version": "1.0.0",
+  "description": "React bindings for MJML",
+  "main": "es/index.js",
+  "author": "MikeyBurkman",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc",
+    "debug": "NODE_PATH=. ts-node-dev --respawn src/index.tsx",
+    "start": "TS_NODE_FILES=true ts-node src/index.tsx",
+    "pretty": "prettier-check \"**/*.{js,json,css,md,ts,tsx}\"",
+    "pretty-fix": "prettier --write \"**/*.{js,json,css,md,ts,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,ts,gql,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.136",
+    "@types/react": "^16.8.24",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "prettier-check": "^2.0.0",
+    "ts-node": "^8.3.0",
+    "ts-node-dev": "^1.0.0-pre.40"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "mjml": "^4.4.1",
+    "typescript": "^3.5.3"
+  }
+}
