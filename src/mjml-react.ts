@@ -7,6 +7,11 @@ const DEBUG = false;
 
 declare global {
   namespace JSX {
+    interface Element {
+      type: any;
+      props: any;
+      key: any;
+    }
     interface IntrinsicElements {
       mjml: Types.MjmlProps;
       'mj-head': Types.MjHeadProps;
@@ -22,6 +27,13 @@ declare global {
       'mj-title': Types.MjTitleProps;
       'mj-section': Types.MjSectionProps;
       'mj-column': Types.MjColumnProps;
+      'mj-accordion': Types.MjAccordionProps;
+      'mj-accordion-element': Types.MjAccordionElementProps;
+      'mj-accordion-title': Types.MjAccordionTitleProps;
+      'mj-accordion-text': Types.MjAccordionTextProps;
+      'mj-button': Types.MjButtonProps;
+      'mj-carousel': Types.MjCarouselProps;
+      'mj-carousel-image': Types.MjCarouselImageProps;
     }
   }
 }
